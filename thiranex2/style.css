@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   CSS VARIABLES
+========================== */
+
+:root{
+    --bg:#020617;
+    --card:#0f172a;
+    --primary:#38bdf8;
+    --secondary:#7dd3fc;
+    --text:#ffffff;
+    --light:#94a3b8;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER & NAVBAR
+========================== */
+
+header{
+    background:#0f172a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.3);
+}
+
+nav{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.intro{
+    color:var(--primary);
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero-description{
+    color:var(--light);
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:var(--primary);
+    color:black;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:black;
+}
+
+/* ==========================
+   COMMON SECTION
+========================== */
+
+.about-section,
+.skills-section,
+.education-section,
+.projects-section,
+.contact-section,
+.highlights{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:90px 0;
+}
+
+h2{
+    text-align:center;
+    color:var(--primary);
+    font-size:2.8rem;
+    margin-bottom:50px;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about-card{
+    background:var(--card);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.about-card p{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   EDUCATION
+========================== */
+
+.education-card{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.education-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* ==========================
+   HIGHLIGHTS
+========================== */
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.highlight-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.highlight-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+    font-weight:600;
+}
+
+.skill-box:hover{
+    transform:translateY(-10px);
+    color:var(--primary);
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:var(--light);
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    font-size:1rem;
+}
+
+input:focus,
+textarea:focus{
+    outline:2px solid var(--primary);
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:var(--primary);
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+.contact-info{
+    text-align:center;
+    margin-top:40px;
+    color:var(--light);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#0f172a;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    color:var(--light);
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:2.5rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .about-card,
+    .education-card,
+    .project-card,
+    .skill-box{
+        padding:25px;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h2{
+        font-size:2rem;
+    }
+
+    .hero-description{
+        font-size:1rem;
+    }
+
+    .btn,
+    .btn-outline{
+        width:100%;
+        text-align:center;
+    }
+}
